@@ -1,23 +1,29 @@
-
 public class Cell {
-	final static int EMPTY = 0;
-	final static int SNAKE = 1;
-	final static int APPLE = 2;
+	private TileType type;
+	private int x;
+	private int y;
 	
-	final int row, col;
-	int type;
-	
-	//constructor: defaults to empty square
-	public Cell(int row, int col) {
-		this.row = row;
-		this.col = col;
-		this.type = Cell.EMPTY;
+	public Cell(int x, int y) {
+	    this.x = x;
+	    this.y = y;
+		this.type = TileType.EMPTY;
 	}
 	
-	//constructor: type specified
-	public Cell(int row, int col, int type) {
-		this.row = row;
-		this.col = col;
+	public Cell(int x, int y, TileType type) {
+	    this.x = x;
+	    this.y = y;
 		this.type = type;
+	}
+	
+	public TileType getType() {
+	    return this.type;
+	}
+	
+	public int getX() {
+	    return this.x;
+	}
+	
+	public int getY() {
+	    return this.y;
 	}
 }
